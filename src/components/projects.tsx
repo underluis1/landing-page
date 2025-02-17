@@ -4,9 +4,9 @@ import { motion } from "framer-motion"
 import Image from "next/image"
 
 const projects = [
-  { id: 1, title: "Project 1", description: "A brief description of Project 1" },
-  { id: 2, title: "Project 2", description: "A brief description of Project 2" },
-  { id: 3, title: "Project 3", description: "A brief description of Project 3" },
+  { id: 1, title: "Landing Ristoranti", description: "Moderna landing page per ristoranti" , img: "/Project1.png?height=200&width=400" , link: "https://restaurants-landing.netlify.app/"},
+  { id: 2, title: "Project 2", description: "A brief description of Project 2" , img:"/Placeholder.webp?height=200&width=400" , link: "https://raffaelelugibello.it"},
+  { id: 3, title: "Project 3", description: "A brief description of Project 3" , img:"/Placeholder.webp?height=200&width=400" , link: "https://raffaelelugibello.it" },
 ]
 
 export default function Projects() {
@@ -31,13 +31,16 @@ export default function Projects() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               viewport={{ once: true }}
               className="bg-gray-700 rounded-lg overflow-hidden shadow-lg"
+              onClick={() => window.open(project.link)}
+
             >
               <Image
-                src={`/placeholder.svg?height=200&width=400`}
+                src={project.img}
                 width={400}
                 height={200}
                 alt={project.title}
                 className="w-full h-48 object-cover"
+                
               />
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>

@@ -13,9 +13,8 @@ export default function Header() {
       className="fixed w-full z-10 bg-gray-900 bg-opacity-90 backdrop-blur-sm"
     >
       <nav className="container mx-auto px-6 py-4 flex justify-between items-center">
-        <Link href="/" className="text-2xl font-bold">
-          RL
-        </Link>
+        <img src="./ghost.svg" alt="Ghost" className="w-[50px] h-[40px]"/>
+        
         <ul className="flex space-x-6">
           {["About", "Projects", "Contact"].map((item) => (
             <li key={item}>
